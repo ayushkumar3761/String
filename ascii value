@@ -1,0 +1,13 @@
+#include<bits/stdc++.h>
+using namespace std;
+void ascii(char S){
+    int value=int(S);
+    cout<<value;
+}
+int main(){
+    char s;
+    cout<<"enter the string"<<endl;
+    cin>>s;
+    ascii(s);
+    
+}
