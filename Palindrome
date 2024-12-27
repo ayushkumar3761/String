@@ -1,0 +1,22 @@
+#include<bits/stdc++.h>
+using namespace std;
+void reverse(string S){
+    int n=S.size();
+    string s1="";
+    for(int i=n-1;i>=0;i--){
+        s1+=S[i];
+    }
+    if(S==s1){
+        cout<<"palindrome"<<endl;
+    }
+    else{
+        cout<<"not palindrome";
+    }
+}
+int main(){
+    string s;
+    cout<<"enter the string"<<endl;
+    cin>>s;
+    reverse(s);
+    
+}
