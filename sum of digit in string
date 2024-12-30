@@ -1,0 +1,22 @@
+#include<bits/stdc++.h>
+using namespace std;
+void twosolve(string s){
+    int n=s.size();
+    string S="";
+    int sum=0;
+    for(int i=0;i<n;i++){
+        if(isdigit(s[i])){
+            S+=s[i];
+        }
+        else{
+            sum+=atoi(S.c_str());
+            S="";
+        }
+    }
+    cout<<sum+atoi(S.c_str());
+}
+int main(){
+    string s1;
+    getline(cin,s1);
+    twosolve(s1);
+}
