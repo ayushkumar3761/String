@@ -1,0 +1,25 @@
+#include<bits/stdc++.h>
+using namespace std;
+void twosolve(string s){
+    int n=s.size();
+    string S="";
+    S+=toupper(s[0]);
+    for(int i=1;i<n-1;i++){
+        if(s[i+1]==' '){
+            S+=toupper(s[i]);
+        }
+        else if(s[i-1]==' '){
+            S+=toupper(s[i]);
+        }
+        else{
+            S+=s[i];
+        }
+    }
+    S+=toupper(s[n-1]);
+    cout<<S;
+}
+int main(){
+    string s1;
+    getline(cin,s1);
+    twosolve(s1);
+}
