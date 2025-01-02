@@ -1,0 +1,68 @@
+#include <bits/stdc++.h>
+using namespace std;
+void subset(string s){
+    int n=s.length();
+    string s1="";
+    for(int i=0;i<n;i++){
+        int j;
+        for(j=0;j<i;j++){
+            if(s[i]==s[j]){
+                break;
+            }
+        }
+        if(i==j){
+            s1+=s[i];
+        }
+    }
+    cout<<s1;
+}
+int main(){
+    string s;
+    getline(cin,s);
+    subset(s);
+
+}#include <bits/stdc++.h>
+using namespace std;
+void subset(string s){
+    int n=s.length();
+    string s1="";
+    for(int i=0;i<n;i++){
+        int j;
+        for(j=0;j<i;j++){
+            if(s[i]==s[j]){
+                break;
+            }
+        }
+        if(i==j){
+            s1+=s[i];
+        }
+    }
+    cout<<s1;
+}
+int main(){
+    string s;
+    getline(cin,s);
+    subset(s);
+
+}
+
+#include <bits/stdc++.h>
+using namespace std;
+void subset(string s){
+    int n=s.length();
+    string s1="";
+    map<char,int>mp;
+    for(int i=0;i<n;i++){
+        if(mp.find(s[i])==mp.end()){
+            mp[s[i]]++;
+            s1+=s[i];
+        }
+    }
+    cout<<s1;
+}
+int main(){
+    string s;
+    getline(cin,s);
+    subset(s);
+
+}
