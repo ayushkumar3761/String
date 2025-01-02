@@ -1,0 +1,30 @@
+#include <bits/stdc++.h>
+using namespace std;
+void subset(string s,string s1){
+    int n=s.length();
+    int n1=s1.length();
+    if(n!=n1){
+        cout<<"Not anagram";
+    }
+    unordered_map<char,int>fre;
+    unordered_map<char,int>fre1;
+    for(char i:s){
+        fre[i]++;
+    }
+    for(char j:s1){
+        fre1[j]++;
+    }
+    if(fre==fre1){
+        cout<<"anagram";
+    }
+    else{
+        cout<<"not anagram";
+    }
+}
+int main(){
+    string s,s1;
+    getline(cin,s);
+    getline(cin,s1);
+    subset(s,s1);
+
+}
