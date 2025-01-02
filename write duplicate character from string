@@ -1,0 +1,20 @@
+#include <bits/stdc++.h>
+using namespace std;
+void subset(string s){
+    int n=s.length();
+    unordered_map<char,int>mp;
+    for(char i:s){
+        mp[i]++;
+    }
+    for(auto j:mp){
+        if(j.second>1){
+            cout<<j.first<<"-"<<j.second<<" ";
+        }
+    }
+}
+int main(){
+    string s;
+    getline(cin,s);
+    subset(s);
+
+}
