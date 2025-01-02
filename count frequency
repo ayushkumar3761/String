@@ -1,0 +1,18 @@
+#include <bits/stdc++.h>
+using namespace std;
+void subset(string s){
+    int n=s.size();
+    unordered_map<char,int>frequency;
+    for(int i=0;i<n;i++){
+        frequency[s[i]]++;
+    }
+    for(auto j:frequency){
+        cout<<j.first<<"-"<<j.second<<" ";
+    }   
+}
+int main(){
+    string s;
+    getline(cin,s);
+    subset(s);
+
+}
