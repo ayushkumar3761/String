@@ -1,0 +1,25 @@
+#include <bits/stdc++.h>
+using namespace std;
+void subset(string s){
+    int n=s.length();
+    int res=-1;
+    unordered_map<char,int>fre;
+    for(char i:s){
+        fre[i]++;
+    }
+    for(auto j:fre){
+        res=max(res,j.second);
+    }
+    for(auto j:fre){
+        if(j.second==res){
+            cout<<j.first<<" ";
+            break;
+        }
+    }
+}
+int main(){
+    string s;
+    getline(cin,s);
+    subset(s);
+
+}
