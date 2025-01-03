@@ -1,0 +1,11 @@
+#include <bits/stdc++.h>
+using namespace std;
+void subset(string s,string s1){
+    cout<<s+s1;
+}
+int main(){
+    string s,s1;
+    getline(cin,s);
+    getline(cin,s1);
+    subset(s,s1);
+}
