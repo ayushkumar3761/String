@@ -1,0 +1,23 @@
+#include <bits/stdc++.h>
+using namespace std;
+void subset(string s){
+    int n=s.length();
+    for(int i=0;i<n;i++){
+        int asci=int(s[i]);
+        if(asci==90){
+            s[i]=char(65);
+        }
+        else if(asci==122){
+            s[i]=char(97);
+        }
+        else if((asci>=65 &&asci<90)||(asci>=95 && asci<122)){
+            s[i]=char(asci+1);
+        }
+    }
+    cout<<s;
+}
+int main(){
+    string s;
+    getline(cin,s);
+    subset(s);
+}
