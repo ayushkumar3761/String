@@ -1,0 +1,27 @@
+#include <bits/stdc++.h>
+using namespace std;
+void subset(string s){
+    int n=s.length();
+    int count=1;
+    string current="";
+    if(s==""){
+        cout<<0;
+        return;
+}
+    for(int i=0;i<n;i++){
+        if(s[i+1]==' '){
+            count++;
+            current="";
+        } 
+        else{
+            current+=s[i];
+        }
+    }
+
+    cout<<count;
+}
+int main(){
+    string s;
+    getline(cin,s);
+    subset(s);
+}
