@@ -1,0 +1,19 @@
+#include <bits/stdc++.h>
+using namespace std;
+void subset(string s){
+    string s1="";
+    for(char c:s){
+        if(islower(c)){
+            s1+=toupper(c);
+        }
+        else {
+            s1+=tolower(c);
+        }
+    }
+    cout<<s1;
+}
+int main(){
+    string s;
+    getline(cin,s);
+    subset(s);
+}
