@@ -1,0 +1,27 @@
+#include <bits/stdc++.h>
+using namespace std;
+void subset(string s){
+    int n=s.length();
+    string largest="";
+    string current="";
+    for(int i=0;i<n;i++){
+        if(s[i]==' '){
+            if(current.length()>largest.length()){
+                largest=current;
+            }
+            current=" ";
+        }
+        else{
+            current+=s[i];
+        }
+    }
+    if(current.length()>largest.length()){
+        largest=current;
+    }
+    cout<<largest;
+}
+int main(){
+    string s;
+    getline(cin,s);
+    subset(s);
+}
