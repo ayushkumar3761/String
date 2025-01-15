@@ -1,0 +1,28 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+void findindex(string s,string p){
+    int n=s.length();
+    int n1=p.length();
+    for(int i=0;i<n;i++){
+        int temp=i;
+        int j=0;
+        for(j=0;j<n1;j++){
+            if(s[temp]!=p[j]){
+                break;
+            }
+            temp++;
+        }
+        if(j==n1){
+            cout<<i;
+        }
+    }
+}
+
+int main(){
+    string s;
+    getline(cin,s);
+    string p;
+    cin>>p;
+    findindex(s,p);
+}
