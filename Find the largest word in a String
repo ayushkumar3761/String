@@ -1,0 +1,37 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+void sortfre(string s){
+    int n=s.length();
+    int maxword=0;
+    int curw=0;
+    string result="";
+    for(int left=0;left<n;){
+        int right=left+1;
+        while(s[right]!=' ' && right<n){
+            right++;
+        }
+        curw=0;
+        for(int i=left;i<right;i++){
+            curw++;
+        }
+        
+        if(curw>maxword){
+            maxword=curw;
+            result="";
+            for(int i=left;i<right;i++){
+                result+=s[i];
+            }
+        }
+        left=right+1;
+    }
+    cout<<result;
+}
+
+int main(){
+  
+    string s;
+    
+    getline(cin,s);
+    sortfre(s);
+}
