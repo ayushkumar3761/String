@@ -1,0 +1,49 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+void sortfre(string &s){
+    int n=s.length();
+    int maxword=0;
+    int curmaxw=0;
+    string result="";
+    for(int left=0;left<n;){
+        int right=left+1;
+        while(s[right]!=' '&& right<n){
+            right++;
+        }
+        curmaxw=0;
+        unordered_map<char,int>fre;
+        for(int i=left;i<right;i++){
+            fre[s[i]]++;
+        }
+        for(auto i:fre){
+            if(i.second>1){
+                curmaxw++;
+            }
+        }
+        if(curmaxw>maxword){
+            maxword=curmaxw;
+            result="";
+            for(int i=left;i<right;i++){
+                result+=s[i];
+            }
+        }
+        left=right+1;
+    }
+        if(result.empty()){
+            cout<<"-1";
+        }
+        else{
+            cout<<result;
+        }
+    
+    
+}
+
+int main(){
+    cin.ignore();
+    string s;
+    
+    getline(cin,s);
+    sortfre(s);
+}
